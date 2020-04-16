@@ -17,6 +17,7 @@ const typeDefs = gql`
     }
 `;
 
+let todoIndex = 0;
 const todos = {
 
 }
