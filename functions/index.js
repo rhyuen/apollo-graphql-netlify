@@ -47,4 +47,4 @@ const server = new ApolloServer({
     introspection: true
 });
 
-module.exports = server.createHandler();
+exports.handler = server.createHandler();
