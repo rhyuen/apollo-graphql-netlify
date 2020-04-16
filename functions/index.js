@@ -23,7 +23,6 @@ const todos = {
 
 const resolvers = {
     Query: {
-        hello: () => "Hello World",
         todos: () => {
             return Object.values(todos);
         }
