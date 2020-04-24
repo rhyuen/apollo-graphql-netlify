@@ -1,4 +1,4 @@
-module.exports = async ({ body, headers }) => {
+exports.handler = async ({ body, headers }) => {
     try {
 
         return {

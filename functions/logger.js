@@ -1,6 +1,6 @@
 let visitors = [];
 
-module.exports = async ({ body, headers }) => {
+exports.handler = async ({ body, headers }) => {
     try {
         visitors.push({
             timeVisited: new Date()
