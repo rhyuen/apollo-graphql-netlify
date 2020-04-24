@@ -1,6 +1,10 @@
 let todoIndex = 0;
 const todos = {
-
+    "key-1000": {
+        id: "1000",
+        text: "some text",
+        done: false
+    }
 }
 
 const resolvers = {
