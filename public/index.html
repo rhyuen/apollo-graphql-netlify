@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>blah</title>
+</head>
+
+<body>
+    <aside></aside>
+    <main>
+        some stuff goes ehre.
+    </main>
+    <aside></aside>
+    <script type="text/javascript">
+        fetch("/.netlify/functions/logger").then(res => res.json())
+            .then(res => {
+                console.log(res.path);
+                console.log(res.payload);
+            }).catch(e => {
+                console.error(e);
+            });
+    </script>
+</body>
+
+</html>

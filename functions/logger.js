@@ -1,8 +1,11 @@
 let visitors = [];
+let count = 0;
 
 exports.handler = async ({ body, headers }) => {
     try {
+        count++;
         visitors.push({
+            count,
             timeVisited: new Date()
         });
         return {
