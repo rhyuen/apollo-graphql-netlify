@@ -10,8 +10,11 @@ exports.handler = async ({ body, headers, httpMethod }) => {
             'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
         };
 
+        console.log(httpMethod);
+
         switch (httpMethod) {
             case 'GET':
+                console.log('get method');
                 return {
                     statusCode: 200,
                     headers,
@@ -19,30 +22,21 @@ exports.handler = async ({ body, headers, httpMethod }) => {
                 }
             case 'POST':
                 const { username, password } = body;
+                console.log('post method');
+                console.log(`${username} and ${password}`);
                 return {
                     statusCode: 200,
                     headers,
                     payload: `Your username is ${username} and your password is ${password}`
                 }
             case 'OPTIONS':
-
+                console.log("OPTIONS call");
                 return {
                     statusCode: 200,
                     headers,
                     payload: "preflight calls."
                 };
         }
-
-
-
-        return {
-            statusCode: 200,
-            headers,
-            body: JSON.stringify({
-                path: "form endpoint",
-                payload: visitors
-            })
-        };
     } catch (e) {
         console.error(`ise for form endpoint ${e}`);
         return {
