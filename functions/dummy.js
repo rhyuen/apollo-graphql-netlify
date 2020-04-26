@@ -9,7 +9,7 @@ exports.handler = async ({ body, headers }) => {
         console.error(`Dummy Endpoint Error Log ${e}`);
         return {
             statusCode: 500,
-            body: `Webhook Error: ${e.message}`
+            body: JSON.stringify({ message: `Webhook Error: ${e.message}` })
         };
     }
 }

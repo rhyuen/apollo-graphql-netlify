@@ -18,7 +18,9 @@ exports.handler = async ({ body, headers, httpMethod }) => {
                 return {
                     statusCode: 200,
                     headers,
-                    payload: `the get endpoint for form.`
+                    body: JSON.stringify({
+                        payload: `the get endpoint for form.`
+                    })
                 }
             case 'POST':
                 const { username, password } = body;
@@ -27,14 +29,18 @@ exports.handler = async ({ body, headers, httpMethod }) => {
                 return {
                     statusCode: 200,
                     headers,
-                    payload: `Your username is ${username} and your password is ${password}`
+                    body: JSON.stringify({
+                        payload: `Your username is ${username} and your password is ${password}`
+                    })
                 }
             case 'OPTIONS':
                 console.log("OPTIONS call");
                 return {
                     statusCode: 200,
                     headers,
-                    payload: "preflight calls."
+                    body: JSON.stringify({
+                        payload: `OPTIONS call.`
+                    })
                 };
         }
     } catch (e) {
@@ -42,7 +48,9 @@ exports.handler = async ({ body, headers, httpMethod }) => {
         return {
             statusCode: 500,
             headers,
-            body: `ise endpoint: ${e.message}`
+            body: JSON.stringify({
+                payload: `ise endpoint: ${e.message}`
+            })
         };
     }
 }

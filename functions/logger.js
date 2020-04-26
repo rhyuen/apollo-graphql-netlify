@@ -28,7 +28,10 @@ exports.handler = async ({ body, headers }) => {
         return {
             statusCode: 500,
             headers,
-            body: `Webhook Error: ${e.message}`
+            body: JSON.stringify({
+                path: "logger error endpoint",
+                payload: `Webhook Error: ${e.message}`
+            })
         };
     }
 }
