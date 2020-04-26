@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Helvetica, sans-serif;
+    --NUM_OF_COL: 12;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: minmax(10px, 1fr) repeat(12, minmax(auto, 100px)) minmax(10px, 1fr);
+}
+
+
+
+@media screen and (min-width: 732px ) and (max-width: 1024px){
+
+}
+
+@media screen and (min-width: 1025px){
+
+}

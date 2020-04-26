@@ -2,15 +2,19 @@
 <html>
 
 <head>
-    <title>blah</title>
+    <title>Apollo</title>
+    <link href="" rel="text/css">
 </head>
 
 <body>
-    <aside></aside>
-    <main>
-        some stuff goes ehre.
-    </main>
-    <aside></aside>
+    <div class="grid">
+        <aside></aside>
+        <main>
+            some stuff goes ehre.
+        </main>
+        <aside></aside>
+    </div>
+
     <script type="text/javascript">
         fetch("/.netlify/functions/logger").then(res => res.json())
             .then(res => {
