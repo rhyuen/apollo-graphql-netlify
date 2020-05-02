@@ -23,12 +23,10 @@ exports.handler = async ({ body, headers, httpMethod }) => {
                     })
                 }
             case 'POST':
-                const data = JSON.parse(body);
+                const { username, password } = JSON.parse(body);
                 console.log(data);
-                console.log(data.username);
-                console.log(data.password);
                 console.log('post method');
-                console.log(`${data.username} and ${data.password}`);
+                console.log(`${username} and ${password}`);
                 return {
                     statusCode: 200,
                     headers,
