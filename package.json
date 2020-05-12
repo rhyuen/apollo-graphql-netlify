@@ -4,16 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "netlify dev & wait-on",
-    "dev": "netlify dev"
+    "ci": "netlify dev -f=./functions & wait-on tcp:34567",
+    "test": "jest ./tests/*.spec.js",
+    "cleanup": "ps | grep node | awk '{print $1}' | xargs kill -9 $1",
+    "dev": "netlify dev",
+    "ci:test": "npm run ci && npm run test && npm run cleanup"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-lambda": "^2.12.0"
+    "apollo-server-lambda": "^2.12.0",
+    "axios": "^0.19.2",
+    "mongoose": "^5.9.13"
   },
   "devDependencies": {
+    "jest": "^26.0.1",
     "wait-on": "^4.0.2"
   }
 }
