@@ -9,6 +9,8 @@ jobs:
       - checkout
       - node/with-cache:
           steps:
+            - run: npm install -g npm@latest
+            - run: npm install -g netlify-cli
             - run: npm install
             - run: npm run ci:test
 workflows:
