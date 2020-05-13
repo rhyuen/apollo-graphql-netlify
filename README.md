@@ -4,3 +4,11 @@
 # About
 
 an attempt at graphql.
+
+# some things i learned.
+
+MAY11, 2020
+> xargs is a command used to compose new commands from standard output.
+
+MAY11, 2020
+> kill -9 is a process kill by the kernel that can't can caught and/or interrupted.  
