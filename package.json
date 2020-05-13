@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ci": "netlify dev -f=./functions & wait-on tcp:34567",
+    "ci": "netlify dev -f=./functions & wait-on tcp:8888",
     "test": "jest ./tests/*.spec.js",
     "cleanup": "ps | grep node | awk '{print $1}' | xargs kill -9 $1",
     "dev": "netlify dev",
