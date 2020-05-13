@@ -1,4 +1,4 @@
 [build]
     publish = "public"
 [dev]
-    functionsPort = "34567"
+    functionsPort = 34567
