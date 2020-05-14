@@ -8,7 +8,8 @@
     "test": "jest ./tests/*.spec.js",
     "cleanup": "ps | grep node | awk '{print $1}' | xargs kill -9 $1",
     "dev": "netlify dev",
-    "ci:test": "npm run ci && npm run test && npm run cleanup"
+    "dev:test": "npm run ci && npm run test && npm run cleanup",
+    "ci:test": "npm run ci && npm run test"
   },
   "keywords": [],
   "author": "",
